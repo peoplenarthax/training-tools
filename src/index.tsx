@@ -1,16 +1,36 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import {
+    createBrowserRouter,
+    RouterProvider,
+} from "react-router-dom";
 import App from './App';
+import './index.css';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+
+import Menu from "./pages/Menu";
+import Reaction from "./pages/Reaction";
+
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <Menu />,
+    },
+    {
+        path: "/reaction",
+        element: <Reaction />,
+    },
+]);
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <App>
+        <RouterProvider router={router} />
+    </App>
   </React.StrictMode>
 );
 
