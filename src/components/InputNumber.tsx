@@ -12,6 +12,7 @@ const InputNumber = ({ min, max, value, onChange}: any) => {
 
     const changeValue = useCallback((delta: number) => () => {
         safeChange(value + delta)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [value])
 
     return (

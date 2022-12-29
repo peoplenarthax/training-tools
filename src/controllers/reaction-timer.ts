@@ -70,6 +70,7 @@ export const useReactionTimer = () => {
                 setPlaying(false)
                 setLaunched(false)
             })
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [repetitions, moveBall, play])
 
     return {
