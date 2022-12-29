@@ -14,6 +14,11 @@
     transform: rotateZ(131deg) translate(-62%, 60%);
 }
 
+.reaction__controller {
+    position: absolute;
+    z-index: 2000;
+}
+
 .reaction__button {
     justify-self: end;
     font-size: 2em;
